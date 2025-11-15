@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- cdn boostrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Login Page</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <style>
+          /* ✅ Ligne verticale pour le mot "or" (mobile friendly) */
+          .vl {
+            position: relative;
+            text-align: center;
+            margin: 2rem 0;
+          }
+          .vl::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #ccc;
+            transform: translateX(-50%);
+          }
+          .vl-innertext {
+            position: relative;
+            background-color: #fff;
+            padding: 0 10px;
+            color: #6c757d;
+          }
+
+          /* ✅ Ajustement des images dans les cartes */
+          .feature img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+          }
+          .feature p {
+            text-align: justify;
+            font-size: 0.9rem;
+          }
+
+          /* ✅ Cercle centré */
+          .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #6c757d;
+            margin: 50px auto;
+          }
+
+          /* ✅ Adaptation mobile */
+          @media (max-width: 768px) {
+            .vl::before {
+              display: none;
+            }
+            .vl-innertext {
+              display: none;
+            }
+          }
+        </style>
+      </head>
+      <body class="bg-light">
+       
+        <!-- ===== NAVBAR ===== -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img
+                src="./logo-boillot-navbar.png"
+                alt="Logo"
+                width="30"
+                height="30"
+                class="d-inline-block me-2"
+              />
+              Stop
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Shop
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <!-- ===== LOGIN SECTION ===== -->
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-md-5 text-center mb-4">
+              <h2>Login with Social Media</h2>
+              <a href="#" class="btn btn-primary w-100 mb-2"
+                >Login with Facebook</a
+              >
+              <a href="#" class="btn btn-info w-100 mb-2 text-white"
+                >Login with Twitter</a
+              >
+              <a href="#" class="btn btn-danger w-100">Login with Google</a>
+            </div>
+
+            <div class="col-md-2 d-none d-md-block">
+              <div class="vl"><span class="vl-innertext">or</span></div>
+            </div>
+
+            <div class="col-md-5">
+              <h2 class="text-center mb-4">Manual Login</h2>
+              <form>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="Enter your address"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Enter your password"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">
+                  Register Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== IMAGE SECTION ===== -->
+        <div class="container my-5">
+          <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-3 feature">
+              <img src="./images/armoir.jpg" alt="Feature 1" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 feature">
+              <img src="./images/armoir.jpg" alt="Feature 2" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 feature">
+              <img src="./images/armoir.jpg" alt="Feature 3" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 feature">
+              <img src="./images/armoir.jpg" alt="Feature 4" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CIRCLE SECTION ===== -->
+        <!-- <div class="circle"></div> -->
+
+        <!-- ===== FOOTER ===== -->
+        <!-- <footer class="bg-dark text-white text-center py-3 mt-5">
+      <p class="mb-0">© 2025 - Responsive Page | Built with Bootstrap 5</p>
+    </footer> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

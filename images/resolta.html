@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="fr">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Formulaire de paiement</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+      </head>
+      <body class="bg-body-tertiary">
+     
+        <div class="container bg-primary">
+          <main>
+            <!-- <h1
+              class=" font-size-lg bg-danger rounded-circle text-white text-center align-items-center justify-content-center "
+              style="
+               */
+              "
+            >
+              B
+            </h1> -->
+           <div class="text-center align-items-center d-flex justify-content-around p-4">
+             <img src="./br.svg" alt="" style="width: 60px; height: 60px; ">
+           </div>
+            <div class="py-5 text-center text-white 2">
+              <h2>Formulaire de paiement</h2>
+              <p class="lead">
+                Voici un exemple de formulaire entièrement construit avec les
+                contrôles de formulaire de Bootstrap. Chaque champ obligatoire
+                affiche un message de validation si vous essayez d’envoyer le
+                formulaire sans le remplir.
+              </p>
+            </div>
+
+            <div class="row g-5">
+              <!-- Panier -->
+              <div class="col-md-5 col-lg-4 order-md-last">
+                <h4
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="text-primary">Votre panier</span>
+                  <span class="badge bg-primary rounded-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                  <li
+                    class="list-group-item d-flex justify-content-between lh-sm"
+                  >
+                    <div>
+                      <h6 class="my-0">Produit 1</h6>
+                      <small class="text-body-secondary"
+                        >Brève description</small
+                      >
+                    </div>
+                    <span class="text-body-secondary">12 $</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between lh-sm"
+                  >
+                    <div>
+                      <h6 class="my-0">Produit 2</h6>
+                      <small class="text-body-secondary"
+                        >Brève description</small
+                      >
+                    </div>
+                    <span class="text-body-secondary">8 $</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between lh-sm"
+                  >
+                    <div>
+                      <h6 class="my-0">Produit 3</h6>
+                      <small class="text-body-secondary"
+                        >Brève description</small
+                      >
+                    </div>
+                    <span class="text-body-secondary">5 $</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between bg-body-tertiary"
+                  >
+                    <div class="text-success">
+                      <h6 class="my-0">Code promo</h6>
+                      <small>EXEMPLECODE</small>
+                    </div>
+                    <span class="text-success">−5 $</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Total (USD)</span>
+                    <strong>20 $</strong>
+                  </li>
+                </ul>
+
+                <form class="card p-2">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Code promo"
+                    />
+                    <button type="submit" class="btn btn-secondary">
+                      Appliquer
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Adresse de facturation -->
+              <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Adresse de facturation</h4>
+                <form class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">Prénom</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        required
+                      />
+                      <div class="invalid-feedback">Le prénom est requis.</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Nom</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        required
+                      />
+                      <div class="invalid-feedback">Le nom est requis.</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="username" class="form-label"
+                        >Nom d’utilisateur</label
+                      >
+                      <div class="input-group has-validation">
+                        <span class="input-group-text">@</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="username"
+                          placeholder="Nom d’utilisateur"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Nom d’utilisateur obligatoire.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="email" class="form-label"
+                        >Email
+                        <span class="text-body-secondary"
+                          >(Optionnel)</span
+                        ></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="vous@exemple.com"
+                      />
+                    </div>
+
+                    <div class="col-12">
+                      <label for="address" class="form-label">Adresse</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="address"
+                        placeholder="1234 Rue Principale"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Veuillez indiquer votre adresse.
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="address2" class="form-label"
+                        >Adresse 2
+                        <span class="text-body-secondary"
+                          >(Optionnel)</span
+                        ></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="address2"
+                        placeholder="Appartement, suite, etc."
+                      />
+                    </div>
+
+                    <div class="col-md-5">
+                      <label for="country" class="form-label">Pays</label>
+                      <select class="form-select" id="country" required>
+                        <option value="">Choisir...</option>
+                        <option>France</option>
+                        <option>Mali</option>
+                        <option>Sénégal</option>
+                        <option>Guinée</option>
+                        <option>Côte d’Ivoire</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Veuillez sélectionner un pays valide.
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="state" class="form-label"
+                        >Région / État</label
+                      >
+                      <select class="form-select" id="state" required>
+                        <option value="">Choisir...</option>
+                        <option>Bamako</option>
+                        <option>Conakry</option>
+                        <option>Dakar</option>
+                        <option>Abidjan</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Veuillez sélectionner une région.
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <label for="zip" class="form-label">Code postal</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="zip"
+                        required
+                      />
+                      <div class="invalid-feedback">Code postal requis.</div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="same-address"
+                    />
+                    <label class="form-check-label" for="same-address"
+                      >L’adresse de livraison est la même que l’adresse de
+                      facturation</label
+                    >
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="save-info"
+                    />
+                    <label class="form-check-label" for="save-info"
+                      >Enregistrer ces informations pour la prochaine
+                      fois</label
+                    >
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <h4 class="mb-3">Paiement</h4>
+
+                  <div class="my-3">
+                    <div class="form-check">
+                      <input
+                        id="credit"
+                        name="paymentMethod"
+                        type="radio"
+                        class="form-check-input"
+                        checked
+                        required
+                      />
+                      <label class="form-check-label" for="credit"
+                        >Carte de crédit</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        id="debit"
+                        name="paymentMethod"
+                        type="radio"
+                        class="form-check-input"
+                        required
+                      />
+                      <label class="form-check-label" for="debit"
+                        >Carte de débit</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        id="paypal"
+                        name="paymentMethod"
+                        type="radio"
+                        class="form-check-input"
+                        required
+                      />
+                      <label class="form-check-label" for="paypal"
+                        >PayPal</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="row gy-3">
+                    <div class="col-md-6">
+                      <label for="cc-name" class="form-label"
+                        >Nom sur la carte</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cc-name"
+                        required
+                      />
+                      <small class="text-body-secondary"
+                        >Nom complet affiché sur la carte</small
+                      >
+                      <div class="invalid-feedback">
+                        name of the carte and requis.
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="cc-number" class="form-label"
+                        >Number of carte</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cc-number"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        cc-number carte requis.
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <label for="cc-expiration" class="form-label"
+                        >Expiration</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cc-expiration"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Date d’expiration requise.
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <label for="cc-cvv" class="form-label">CVV</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cc-cvv"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Code de sécurité requis.
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <button class="w-100 btn btn-primary btn-lg" type="submit">
+                    Continuer vers le paiement
+                  </button>
+                </form>
+              </div>
+            </div>
+          </main>
+
+          <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+            <p class="mb-1">© 2017–2025 Nom de l’entreprise</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Confidentialité</a></li>
+              <li class="list-inline-item"><a href="#">Conditions</a></li>
+              <li class="list-inline-item"><a href="#">Assistance</a></li>
+            </ul>
+          </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+      </body>
+    </html>
+  </body>
+</html>
